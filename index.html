@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simbu WebPage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Online Shopping Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <style>
+     body {
+      background-color: #f9f9f9;
+    }
+    .navbar {
+      background-color: #007bff;
+    }
+    .navbar-brand {
+      color: #fff;
+    }
+    .navbar .contact-form {
+      position: relative;
+      margin-right: 20px;
+      color: #fff;
+      cursor: pointer;
+    }
+    .contact-modal .modal-content {
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    .contact-modal .modal-header {
+      background-color: #007bff;
+      color: #fff;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .contact-modal .modal-title {
+      font-weight: bold;
+    }
+    .contact-modal .form-group {
+      margin-bottom: 15px;
+    }
+    .contact-modal .form-control {
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+    .contact-modal .form-control:focus {
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    .contact-modal .modal-footer {
+      justify-content: flex-start;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    .product-card {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    .product-card img {
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+    .product-card:hover img {
+      transform: scale(1.2);
+    }
+    .product-card .btn {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .product-card:hover .btn {
+      opacity: 1;
+    }
+    .image-step {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    .image-step img {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+    .image-step h3 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .image-step p {
+      font-size: 14px;
+    }
+    .image-step:hover {
+      transform: scale(1.05);
+    }
+    .product-card {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    .product-card img {
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+    .product-card:hover img {
+      transform: scale(1.2);
+    }
+    .product-card .btn {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .product-card:hover .btn {
+      opacity: 1;
+    }
+    .image-step {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    .image-step img {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+    .image-step h3 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .image-step p {
+      font-size: 14px;
+    }
+    .image-step:hover img {
+      transform: scale(1.2);
+    }
+   </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Simbu Shopping</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="slide1.jpg" alt="Image 1">
+      <div class="carousel-caption">
+        <h3></h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="slide2.jpg" alt="Image 2">
+      <div class="carousel-caption">
+        <h3></h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="slide3.jpg" alt="Image 2">
+      <div class="carousel-caption">
+        <h3></h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="slide4.jpg" alt="Image 3">
+      <div class="carousel-caption">
+        <h3></h3>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="card1.jpg" class="card-img-top" alt="Card Image 1">
+        <div class="card-body">
+          <h5 class="card-title">MacBook</h5>
+          <p class="card-text">Rugged Case For Macbook Air 13-Inch M1 A2337- A2179- A1932 Transparent Pc Hard Shell Cover</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="card2.jpg" class="card-img-top" alt="Card Image 2">
+        <div class="card-body">
+          <h5 class="card-title">BoAt Speaker</h5>
+          <p class="card-text">Stone 1000 N Portable Wireless Speaker with 14W Stereo Sound - Black</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="card3.jpg" class="card-img-top" alt="Card Image 2">
+        <div class="card-body">
+          <h5 class="card-title">Power Bank</h5>
+          <p class="card-text">Stylo 20K 20000mAh Power Bank Blue</p>
+        </div>
+    </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="card4.jpg" class="card-img-top" alt="Card Image 2">
+        <div class="card-body">
+          <h5 class="card-title">Smart Watch</h5>
+          <p class="card-text">Ring Bluetooth Calling Smartwatch with SpO2 & 1.7 inch Multiple Watch Faces (Black)</p>
+        </div>
+    </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="card5.jpg" class="card-img-top" alt="Card Image 2">
+        <div class="card-body">
+          <h5 class="card-title">BoAt Earbuds</h5>
+          <p class="card-text">Harmonics Twins S3 Smart TWS Bluetooth 5.2 Earbuds, 20 Hrs Playtime Black POR-1664</p>
+        </div>
+    </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="card9.jpg" class="card-img-top" alt="Card Image 2">
+        <div class="card-body">
+          <h5 class="card-title">Backup PowerBank</h5>
+          <p class="card-text">Stylo Boost with 40,000mAh Battery and Ultra-Fast Charging Output of 65W Green</p>
+        </div>
+    </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="card6.jpg" class="card-img-top" alt="Card Image 2">
+        <div class="card-body">
+          <h5 class="card-title">Sandisk Pendrive</h5>
+          <p class="card-text">Cruzer Blade SDCZ50-016G-135 16GB USB 2.0 Pen Drive</p>
+        </div>
+    </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="card8.jpg" class="card-img-top" alt="Card Image 2">
+        <div class="card-body">
+          <h5 class="card-title">Mobile BackCase</h5>
+          <p class="card-text">Carbon Fiber Case For Samsung Galaxy Z Flip 3 - 7.6 inch
+          </p>
+        </div>
+    </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="card7.jpg" class="card-img-top" alt="Card Image 3">
+        <div class="card-body">
+          <h5 class="card-title">Mobile Charger</h5>
+          <p class="card-text">Zeb- MA5311Q USB Charger Adapter C Type, Rapid charge for mobile and tablet (White)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="bg-light p-3">Smart Phones</div>
+      <img src="product1.jpg" class="img-fluid" alt="Apple Phone">
+      <h4>Apple Phone</h4>
+      <p>Apple iPhone 14 Pro Max 1 TB (Deep Purple, 6 GB RAM)</p>
+      <p><strong>Price: ₹179,900</strong></p>
+      <button type="button" class="btn btn-primary">Buy Now</button>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="bg-light p-3">Laptop</div>
+      <img src="product2.jpg" class="img-fluid" alt="HP Laptop">
+      <h4>HP Laptop</h4>
+      <p>HP Pavilion 15-Ec2146AX AMD Ryzen 7 5800H 15.6 Inches Gaming Laptop (16GB/512GB SSD/Windows 11/Ultra Violet/1.98 Kg)</p>
+      <p><strong>Price: ₹84,900</strong></p>
+      <button type="button" class="btn btn-primary">Buy Now</button>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="bg-light p-3">Television</div>
+      <img src="product3.jpg" class="img-fluid" alt="Redmi TV">
+      <h4>Redmi TV</h4>
+      <p>Redmi L32M6-RA/L32M7-RA 32 Inch LED HD Ready, 1366 X 768 TV</p>
+      <p><strong>Price: ₹15,990</strong></p>
+      <button type="button" class="btn btn-primary">Buy Now</button>
+    </div>
+    </div>
+  </div>
+</div>
+<div class="container mt-5">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal">
+    Sign Up
+  </button>
+</div>
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">Sign Up</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone number">Phone Number</label>
+            <input type="phone" class="form-control" id="phone" placeholder="Enter your Number" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
